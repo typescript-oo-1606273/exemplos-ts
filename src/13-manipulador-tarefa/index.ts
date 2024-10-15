@@ -4,4 +4,5 @@
     id (número): um identificador único para a tarefa.
     descricao (string): uma descrição da tarefa.
     status (StatusTarefa): o status atual da tarefa.
+    observacoes (string): observações relacionadas a tarefa (opcional)
  */
