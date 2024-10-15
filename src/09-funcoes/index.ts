@@ -2,6 +2,7 @@
  * Função Simples:
     * Crie uma função chamada saudacao que aceita um parâmetro nome do tipo string e retorna uma saudação no formato "Olá, {nome}!". Função com Parâmetros Opcionais:
     * Crie uma função chamada exibirIdade que aceita dois parâmetros: nome (string) e idade (número). O parâmetro idade deve ser opcional. A função deve retornar uma mensagem com o nome e a idade, se fornecida.
+    * Crie uma função chamada void 
  * Função com Vários Parâmetros:
     * Crie uma função chamada soma que aceita dois números como parâmetros e retorna a soma deles.
  * Função com Tipo de Retorno:

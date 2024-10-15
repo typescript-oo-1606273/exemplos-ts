@@ -4,6 +4,3 @@
 //Tipo interseção
 //Tipo literal
 //Enum
-//Classe
-//Interface
-//Exceção

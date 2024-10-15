@@ -6,3 +6,6 @@
  * boolean: Para verificar se a pessoa está fazendo os exercícios.
  * array: Para armazenar as notas de um estudante em um array de números.
  */
+
+const idade: number = 29;
+const altura: number = 174;
