@@ -6,3 +6,12 @@
  * Valor vazio: Para strings e arrays, demonstrando como trabalhar com valores vazios.
  */
 
+const valorNull = null;
+const valorUndefined = undefined;
+const valorVazio = "";
+
+if (valorVazio == valorNull) {
+  console.log('Entrou no IF');
+} else {
+  console.log('Entrou no ELSE');
+}

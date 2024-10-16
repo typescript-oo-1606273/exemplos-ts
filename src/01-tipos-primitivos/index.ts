@@ -8,4 +8,8 @@
  */
 
 const idade: number = 29;
-const altura: number = 174;
+let altura: number = 176;
+const estamosFazendoExercicios: boolean = true;
+const listaNotas: number[] = [10, 10, 10, 10];
+
+console.log(idade);

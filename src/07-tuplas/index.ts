@@ -7,3 +7,19 @@
 
    Crie uma função chamada useState que retorna uma tupla
 */
+
+const livro = ['Código Limpo', 2010];
+const [titulo, ano] = livro; //Destructuring
+
+// const [valor, setValor] = useState("10");
+
+//Outros exemplos de Destructuring
+const aluno = {
+  nome: 'Igor',
+  idade: 29,
+}
+const { 
+  nome: meuNome,
+  idade: minhaIdade,
+} = aluno;
+console.log(meuNome, minhaIdade);

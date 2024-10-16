@@ -13,3 +13,40 @@
     * Crie uma arrow function chamada ehPar que aceita um número e retorna um booleano indicando se o número é par.
  */
 
+//Funções com nomes
+
+function apresentar(nome: string): string {
+   return `Olá, meu nome é ${nome}`; //Template Literal
+}
+// console.log(apresentar("Jefferson"));
+
+function exibirIdade(nome: string, idade: number): void {
+   console.log(`Meu nome ${nome} e tenho ${idade} anos`);
+}
+// exibirIdade("Joãozinho", 80);
+
+//Funções anonimas
+const multiplicar = function(num1: number, num2: number): number {
+   return num1 * num2;
+}
+// console.log(multiplicar(10, 20));
+
+//Arrow function - função de flecha
+const somar = (num1: number, num2: number): number => {
+   return num1 + num2;
+}
+// console.log(somar(10, 20));
+
+https://youtu.be/yJ52SM60_HY
+//Funções como parâmetros
+function executarOperacao(
+   num1: number, num2: number, 
+   operacao: ((valor1: number, valor2: number) => number)
+): number {
+   return operacao(num1, num2);
+}
+const resultado = executarOperacao(15, 20, somar);
+console.log(resultado);
+
+console.log(typeof somar);
+
