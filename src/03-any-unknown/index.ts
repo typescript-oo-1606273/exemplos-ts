@@ -11,7 +11,6 @@ valor = 10;
 valor = true;
 valor = { nome: "Jeff" };
 
-
 let texto: unknown = "Qualquer coisa";
 
 let palavras = texto as String;
@@ -23,3 +22,5 @@ let valores: Array<number> = [10, 15, 20];
 let minhaStringFalsa: string = valores as unknown as string;
 
 minhaStringFalsa.split(' ');
+
+export {}

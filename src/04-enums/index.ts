@@ -24,3 +24,15 @@ enum StatusPedido {
   TRANSPORTE = 'TR',
   ENTREGUE = 'EN',
 }
+
+enum Cor {
+  VERMELHO = 'V',
+  AMARELO = 'L',
+  PRETO = 'P',
+}
+
+enum PerfilAcesso {
+  ADMINISTRADOR = 0,
+  ALUNO = 1,
+  PROFESSOR = 2,
+}

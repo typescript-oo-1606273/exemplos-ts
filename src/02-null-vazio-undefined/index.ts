@@ -10,7 +10,19 @@ const valorNull = null;
 const valorUndefined = undefined;
 const valorVazio = "";
 
-if (valorVazio == valorNull) {
+if (valorNull) { //null é falso
+  console.log('Entrou no IF');
+} else {
+  console.log('Entrou no ELSE');
+}
+
+if (valorUndefined) { //undefined é falso
+  console.log('Entrou no IF');
+} else {
+  console.log('Entrou no ELSE');
+}
+
+if (valorVazio) { //vazio é falso
   console.log('Entrou no IF');
 } else {
   console.log('Entrou no ELSE');

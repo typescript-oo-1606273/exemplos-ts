@@ -37,7 +37,6 @@ const somar = (num1: number, num2: number): number => {
 }
 // console.log(somar(10, 20));
 
-https://youtu.be/yJ52SM60_HY
 //Funções como parâmetros
 function executarOperacao(
    num1: number, num2: number, 
