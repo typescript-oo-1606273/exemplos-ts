@@ -31,3 +31,5 @@ const novoAluno: PessoaAlunoTarget = {
   idade: 29,
   nome: 'Joãozinho'
 }
+
+export {}

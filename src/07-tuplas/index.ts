@@ -9,7 +9,10 @@
 */
 
 const livro = ['Código Limpo', 2010];
+
 const [titulo, ano] = livro; //Destructuring
+
+console.log(livro, titulo, ano);
 
 // const [valor, setValor] = useState("10");
 
@@ -22,4 +25,18 @@ const {
   nome: meuNome,
   idade: minhaIdade,
 } = aluno;
-console.log(meuNome, minhaIdade);
+// console.log(meuNome, minhaIdade);
+
+
+const numerosPares = [2, 4, 6, 8];
+const numerosImpares = [1, 3, 5, 7];
+const todosNumeros = [ ...numerosPares, ...numerosImpares ];
+
+
+const objeto1 = {
+  nome: 'Jeff'
+}
+const objeto2 = {
+  idade: 29
+}
+const objeto3 = { ...objeto1, ...objeto2 };
