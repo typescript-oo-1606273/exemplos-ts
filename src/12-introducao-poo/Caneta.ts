@@ -1,12 +1,8 @@
-enum Cores {
-  VERDE = 0,
-  VERMELHO = 1,
-  AZUL = 2,
-  PRETO = 3
-}
+import { Cores } from "./Cor";
+import { Produto } from "./Produto";
 
 //Classe
-class Caneta {
+export class Caneta implements Produto {
   //Atributos ou propriedades
   private cor: Cores;
   private marca: string;
@@ -37,27 +33,32 @@ class Caneta {
     this.cor = parametroCor;
   }
 
-  getCor() { //getter
+  obterCor() { //getter
     return this.cor;
   }
 
-  getMarca() { //getter
+  obterMarca() { //getter
     return this.marca;
   }
 
-  getModelo() {
+  obterModelo() {
     return this.modelo;
   }
 }
 
+
 const canetaBicAzul = new Caneta(Cores.AZUL, "Bic", "Esferográfica"); //Instanciando a classe
 
-console.log(canetaBicAzul.escrever("Estamos aprendendo POO"));
-console.log(canetaBicAzul.escrever("Estamos aprendendo Typescript"));
-console.log(canetaBicAzul.escrever("Estamos aprendendo Typescript"));
-console.log(canetaBicAzul.escrever("Estamos aprendendo Typescript"));
 
-console.log(canetaBicAzul);
+// console.log(canetaBicAzul.setCor(Cores.PRETO));
+
+
+// console.log(canetaBicAzul.escrever("Estamos aprendendo POO"));
+// console.log(canetaBicAzul.escrever("Estamos aprendendo Typescript"));
+// console.log(canetaBicAzul.escrever("Estamos aprendendo Typescript"));
+// console.log(canetaBicAzul.escrever("Estamos aprendendo Typescript"));
+
+// console.log(canetaBicAzul);
 
 // console.log(canetaBicAzul);
 
