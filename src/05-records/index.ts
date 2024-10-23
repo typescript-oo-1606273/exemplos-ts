@@ -6,18 +6,18 @@ const alunos: Record<number, string> = {
   102: "Maria Oliveira",
   103: "Pedro Santos",
   104: "Ana Paula",
-  105: "Lucas Almeida"
+  105: "Lucas Almeida",
 };
 
 type DicionarioPessoas = {
-  [key: number]: string
-}
+  [key: number]: string;
+};
 const pessoas: DicionarioPessoas = {
   101: "João Silva",
   102: "Maria Oliveira",
   103: "Pedro Santos",
   104: "Ana Paula",
-  105: "Lucas Almeida"
+  105: "Lucas Almeida",
 };
 
-
+export {};

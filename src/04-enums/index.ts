@@ -14,21 +14,21 @@ enum DiasDaSemana {
   QUARTA = 3,
   QUINTA = 4,
   SEXTA = 5,
-  SABADO = 6
+  SABADO = 6,
 }
 
 const diaEscolhido: DiasDaSemana = DiasDaSemana.QUARTA;
 
 enum StatusPedido {
-  AGUARDANDO_PAGAMENTO = 'AP',
-  TRANSPORTE = 'TR',
-  ENTREGUE = 'EN',
+  AGUARDANDO_PAGAMENTO = "AP",
+  TRANSPORTE = "TR",
+  ENTREGUE = "EN",
 }
 
 enum Cor {
-  VERMELHO = 'V',
-  AMARELO = 'L',
-  PRETO = 'P',
+  VERMELHO = "V",
+  AMARELO = "L",
+  PRETO = "P",
 }
 
 enum PerfilAcesso {
@@ -36,3 +36,5 @@ enum PerfilAcesso {
   ALUNO = 1,
   PROFESSOR = 2,
 }
+
+export {};

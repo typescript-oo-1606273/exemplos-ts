@@ -8,7 +8,7 @@
    Crie uma função chamada useState que retorna uma tupla
 */
 
-const livro = ['Código Limpo', 2010];
+const livro = ["Código Limpo", 2010];
 
 const [titulo, ano] = livro; //Destructuring
 
@@ -18,25 +18,22 @@ console.log(livro, titulo, ano);
 
 //Outros exemplos de Destructuring
 const aluno = {
-  nome: 'Igor',
+  nome: "Igor",
   idade: 29,
-}
-const { 
-  nome: meuNome,
-  idade: minhaIdade,
-} = aluno;
+};
+const { nome: meuNome, idade: minhaIdade } = aluno;
 // console.log(meuNome, minhaIdade);
-
 
 const numerosPares = [2, 4, 6, 8];
 const numerosImpares = [1, 3, 5, 7];
-const todosNumeros = [ ...numerosPares, ...numerosImpares ];
-
+const todosNumeros = [...numerosPares, ...numerosImpares];
 
 const objeto1 = {
-  nome: 'Jeff'
-}
+  nome: "Jeff",
+};
 const objeto2 = {
-  idade: 29
-}
+  idade: 29,
+};
 const objeto3 = { ...objeto1, ...objeto2 };
+
+export {};

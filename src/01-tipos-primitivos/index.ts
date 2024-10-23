@@ -1,6 +1,6 @@
 /**
  * Crie variáveis utilizando os seguintes tipos primitivos
- * 
+ *
  * number: Para representar a idade e altura de uma pessoa.
  * string: Para armazenar o nome e uma apresentação personalizada.
  * boolean: Para verificar se a pessoa está fazendo os exercícios.
@@ -13,3 +13,5 @@ const estamosFazendoExercicios: boolean = true;
 const listaNotas: number[] = [10, 10, 10, 10];
 
 console.log(idade);
+
+export {};

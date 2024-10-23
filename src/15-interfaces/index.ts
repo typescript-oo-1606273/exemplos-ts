@@ -3,7 +3,6 @@
  * Definem apenas a assinatura dos métodos ou dos atributos públicos
  */
 
-
 interface Carro {
   marca: string;
   modelo: string;
@@ -16,5 +15,4 @@ interface Carro {
 //   ano?: number;
 // }
 
-
-// Crie uma interface Animal e uma classe cachorro que implementem 
+// Crie uma interface Animal e uma classe cachorro que implementem
