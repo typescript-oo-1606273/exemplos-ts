@@ -7,11 +7,4 @@
  * array: Para armazenar as notas de um estudante em um array de números.
  */
 
-const idade: number = 29;
-let altura: number = 176;
-const estamosFazendoExercicios: boolean = true;
-const listaNotas: number[] = [10, 10, 10, 10];
-
-console.log(idade);
-
 export {};
