@@ -6,34 +6,40 @@
  * Crie uma matriz de números 3x3 que represente uma tabela de pontuações em um jogo.
  * */
 
-const numerosPositivos: Array<number> = [1, 2, 3, 4, 5];
-const listaFrutas: string[] = ["Banana", "Maça", "Cacau"];
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+// for (let index = 0; index < dimensoes.length; index++) {
+//   const numeros = dimensoes[index];
 
-type Aluno = {
-  nome: string;
-};
-
-const listaDeAlunos: Aluno[] = [
-  {
-    nome: "Wagner",
-  },
-  {
-    nome: "Helen",
-  },
-];
-
-const dimensoes: number[][] = [
-  [1, 2, 3],
-  [4, 5, 6],
-];
-
-for (let index = 0; index < dimensoes.length; index++) {
-  const numeros = dimensoes[index];
-
-  for (let outroIndex = 0; outroIndex < numeros.length; outroIndex++) {
-    const numero = numeros[outroIndex];
-    console.log(numero);
-  }
-}
+//   for (let outroIndex = 0; outroIndex < numeros.length; outroIndex++) {
+//     const numero = numeros[outroIndex];
+//     console.log(numero);
+//   }
+// }
 
 export {};
