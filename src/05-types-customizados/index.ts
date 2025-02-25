@@ -42,10 +42,38 @@ type Pessoa = {
   pais: string;
 };
 
+type Estudante = {
+  curso: string;
+} & Pessoa;
+
 const jeff: Pessoa = {
   nome: "Jefferson",
   idade: 25,
   pais: "Brasil",
+};
+
+const luiz: Estudante = {
+  nome: "Luiz",
+  curso: "Typescript",
+  idade: 25,
+  pais: "Brasil",
+};
+
+type Profissional = {
+  nome: string;
+  profissao: string;
+  documento?: string;
+};
+
+const pedreiro: Profissional = {
+  nome: "João",
+  profissao: "Pedreiro",
+  documento: "213321123",
+};
+
+const enfermeiro: Profissional = {
+  nome: "José",
+  profissao: "Enfermeiro",
 };
 
 export {};
