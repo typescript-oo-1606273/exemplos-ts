@@ -1,18 +1,21 @@
 /**
  *
- * 1. Defina um type alias "Endereco" com as propriedades:
+ * 1. Defina um type criado a partir de um tipo primitivo (string, boolean, number)
+ 
+ * 2. Defina um type alias "Endereco" com as propriedades:
  *    - rua: string
  *    - numero: number
  *    - Exemplo: Crie uma variável "meuEndereco" do tipo Endereco com valores de exemplo.
  *
- * 2. Crie um tipo literal chamado "DiasSemana" que permita apenas os seguintes valores:
+ * 3. Crie um tipo literal chamado "DiasSemana" que permita apenas os seguintes valores:
  *    'segunda', 'terca', 'quarta', 'quinta' ou 'sexta'.
  *    - Exemplo: Declare uma variável "diaAtual" do tipo DiasSemana e atribua a ela um dos valores válidos.
  *
- * 3. Crie um tipo union (|) chamado "Dado" que possa ser do tipo string ou number.
+ * 4. Crie um tipo union (|) chamado "Dado" que possa ser do tipo string ou number.
  *    - Exemplo: Declare uma variável "valor" do tipo Dado e atribua a ela um número.
+ *    - string | number | boolean
  *
- * 4. Crie dois tipos:
+ * 5. Crie dois tipos:
  *    - "Pessoa" com as propriedades:
  *         nome: string
  *         idade: number
@@ -23,38 +26,26 @@
  *    - Exemplo: Declare uma variável "alunoExemplo" do tipo Aluno com valores de exemplo.
  */
 
-//Tipo union (|)
-type TipoDeDado = string | number; //Union
-const dado: TipoDeDado = 10;
+type ValorRecebido = string | number; //or
 
-//Tipo com alias
-type Endereco = {
-  rua: string;
-  numero: number;
-};
-const meuEndereco: Endereco = {
-  numero: 10,
-  rua: "Rua de ninguém",
-};
+const valor: ValorRecebido = 10;
 
-//Tipo literal
-type DiasSemana = "segunda" | "terca" | "quarta" | "quinta" | "sexta"; //Literal
-const meuDia: DiasSemana = "segunda";
+type DiasDaSemana = "segunda" | "terca" | "quarta" | "quinta" | "sexta";
 
-//Tipo com interseção (&)
+const dia: DiasDaSemana = "segunda";
+
+console.log(valor, dia);
+
 type Pessoa = {
   nome: string;
   idade: number;
+  pais: string;
 };
-type AlunoTarget = {
-  nome: string;
-  curso: string;
-};
-type PessoaAlunoTarget = Pessoa & AlunoTarget;
-const novoAluno: PessoaAlunoTarget = {
-  curso: "Typescript",
-  idade: 29,
-  nome: "Joãozinho",
+
+const jeff: Pessoa = {
+  nome: "Jefferson",
+  idade: 25,
+  pais: "Brasil",
 };
 
 export {};

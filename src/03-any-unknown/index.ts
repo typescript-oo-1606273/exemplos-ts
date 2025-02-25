@@ -5,4 +5,22 @@
  *  mas que precisa de verificação de tipo antes de ser utilizado.
  */
 
+let valor: any = 10; //Em Javascript tudo é any
+
+valor = "Qualquer texto";
+valor = false;
+valor = {
+  nome: "Jeff",
+};
+
+let outroValor: unknown = {
+  nome: "Jeff",
+};
+
+let pessoa = outroValor as {
+  nome: string;
+}; //casting
+
+console.log(outroValor, pessoa);
+
 export {};
