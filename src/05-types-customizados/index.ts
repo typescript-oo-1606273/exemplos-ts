@@ -76,4 +76,8 @@ const enfermeiro: Profissional = {
   profissao: "Enfermeiro",
 };
 
+if (!enfermeiro.documento) {
+  //undefined
+}
+
 export {};

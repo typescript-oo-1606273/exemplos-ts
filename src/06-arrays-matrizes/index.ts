@@ -6,40 +6,52 @@
  * Crie uma matriz de números 3x3 que represente uma tabela de pontuações em um jogo.
  * */
 
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-// for (let index = 0; index < dimensoes.length; index++) {
-//   const numeros = dimensoes[index];
+const numeros: Array<number> = [1, 2, 3, 4, 5];
+const palavras: string[] = ["Oi", "Bom dia"];
+const verdadeirosOuFalsos: boolean[] = [true, false, true, true];
 
-//   for (let outroIndex = 0; outroIndex < numeros.length; outroIndex++) {
-//     const numero = numeros[outroIndex];
-//     console.log(numero);
-//   }
+const stringsOuBoolean: (string | boolean)[] = ["true", true, false, "false"];
+
+const listaDefinida: [boolean, string, number] = [true, "Texto", 10];
+
+type Professor = {
+  nome: string;
+};
+
+const professores: Professor[] = [
+  {
+    nome: "Jeff",
+  },
+  {
+    nome: "Cicero",
+  },
+  {
+    nome: "Wagner",
+  },
+];
+
+// for (let index = 0; index < professores.length; index++) {
+//   console.log(`Sou o professor ${professores[index].nome} `); //Template string ou Template literal
 // }
+
+const coordenadas: number[][] = [
+  [10, 12, 15],
+  [2, 3, 5],
+  [7, 9, 10],
+];
+
+for (let index = 0; index < coordenadas.length; index++) {
+  const item = coordenadas[index];
+
+  for (
+    let indiceNumero = 0;
+    indiceNumero < coordenadas.length;
+    indiceNumero++
+  ) {
+    const numero = coordenadas[index][indiceNumero];
+
+    console.log(numero);
+  }
+}
 
 export {};
