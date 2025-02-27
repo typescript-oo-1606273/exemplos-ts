@@ -8,32 +8,16 @@
    Crie uma função chamada useState que retorna uma tupla
 */
 
-const livro = ["Código Limpo", 2010];
+const livro: [string, number, boolean] = ["Clean Code", 2007, true];
 
-const [titulo, ano] = livro; //Destructuring
+const [nome, dataPublicacao, estaPublicado] = livro;
 
-console.log(livro, titulo, ano);
-
-// const [valor, setValor] = useState("10");
-
-//Outros exemplos de Destructuring
-const aluno = {
-  nome: "Igor",
-  idade: 29,
-};
-const { nome: meuNome, idade: minhaIdade } = aluno;
-// console.log(meuNome, minhaIdade);
-
-const numerosPares = [2, 4, 6, 8];
-const numerosImpares = [1, 3, 5, 7];
-const todosNumeros = [...numerosPares, ...numerosImpares];
-
-const objeto1 = {
-  nome: "Jeff",
-};
-const objeto2 = {
-  idade: 29,
-};
-const objeto3 = { ...objeto1, ...objeto2 };
+const livros: [string, number, boolean][] = [
+  ["Clean Code", 2007, true],
+  ["O dia depois de amanhã", 2020, true],
+  ["O dia depois de amanhã", 2020, true],
+  ["O dia depois de amanhã", 2020, true],
+  ["O dia depois de amanhã", 2020, true],
+];
 
 export {};
