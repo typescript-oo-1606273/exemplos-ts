@@ -15,39 +15,50 @@
 
 //Funções com nomes
 
-function apresentar(nome: string): string {
-  return `Olá, meu nome é ${nome}`; //Template Literal
-}
-// console.log(apresentar("Jefferson"));
+//Paradigmas
+//Orientação a objetos
+//Funcional
 
-function exibirIdade(nome: string, idade: number): void {
-  console.log(`Meu nome ${nome} e tenho ${idade} anos`);
-}
-// exibirIdade("Joãozinho", 80);
+// function somar(num1: number, num2: number): number {
+//   return num1 + num2;
+// }
 
-//Funções anonimas
-const multiplicar = function (num1: number, num2: number): number {
-  return num1 * num2;
-};
-// console.log(multiplicar(10, 20));
+// const somar = function (num1: number, num2: number): number {
+//   return num1 + num2;
+// }; //Função anonima
 
-//Arrow function - função de flecha
-const somar = (num1: number, num2: number): number => {
+const somar = (num1: number, num2: number) => {
   return num1 + num2;
-};
+}; //Arrow Function
+
 // console.log(somar(10, 20));
 
 //Funções como parâmetros
-function executarOperacao(
-  num1: number,
-  num2: number,
-  operacao: (valor1: number, valor2: number) => number
-): number {
-  return operacao(num1, num2);
-}
-const resultado = executarOperacao(15, 20, somar);
-console.log(resultado);
 
-console.log(typeof somar);
+type Usuario = {
+  login: string;
+  senha: string;
+};
+
+function sleep(ms: number) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
+
+function fazerLogin(usuario: Usuario, onError: (error: string) => void) {
+  //Chamar várias coisas relacionadas a fazer login...
+
+  onError("Erro no login");
+}
+
+const jeff: Usuario = {
+  login: "jefferson.cardoso",
+  senha: "12345",
+};
+
+console.log("Primeira coisa");
+fazerLogin(jeff, (error: string) => {
+  console.log(error);
+});
+console.log("Outra coisa");
 
 export {};

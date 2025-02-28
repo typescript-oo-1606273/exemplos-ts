@@ -1,40 +1,39 @@
 /**
- * Desenvolver um manipulador de tarefas que gerencie uma lista de tarefas, permitindo adicionar, listar, buscar, remover e alterar o status das tarefas.
+ * Desenvolver um manipulador de tarefas que gerencie uma lista de tarefas, permitindo adicionar, listar, buscar, remover e alterar a situação das tarefas.
  * Uma tarefa deve conter as seguintes propriedades:
     id (número): um identificador único para a tarefa.
     descricao (string): uma descrição da tarefa.
-    status (StatusTarefa): o status atual da tarefa (PENDENTE, ANDAMENTO, CONCLUIDA).
+    situacao (SituacaoTarefa): o situacao atual da tarefa (PENDENTE, ANDAMENTO, CONCLUIDA).
     observacoes (string): observações relacionadas a tarefa (opcional)
  */
 
-import { adicionar, buscar, listar, remover } from "./gerenciador-tarefa";
-import { alterarStatus, StatusTarefa, Tarefa } from "./tarefa";
+import {
+  adicionar,
+  alterarSituacao,
+  buscar,
+  listar,
+} from "./gerenciador-tarefa";
+import { SituacaoTarefa } from "./situacao-tarefa";
 
 adicionar({
-   id: 1,
-   descricao: "Desc",
-   status: StatusTarefa.PENDENTE,
-   observacoes: "Minhas observações"
+  id: 10,
+  descricao: "Comprar roupa",
+  situacao: SituacaoTarefa.PENDENTE,
 });
 adicionar({
-   id: 2,
-   descricao: "Desc",
-   status: StatusTarefa.PENDENTE,
-   observacoes: "Minhas observações"
+  id: 25,
+  descricao: "Almoçar",
+  situacao: SituacaoTarefa.PENDENTE,
 });
 adicionar({
-   id: 3,
-   descricao: "Desc",
-   status: StatusTarefa.PENDENTE,
-   observacoes: "Minhas observações"
+  id: 35,
+  descricao: "Dar aula",
+  situacao: SituacaoTarefa.PENDENTE,
 });
 
-alterarStatus(buscar(1) as Tarefa, StatusTarefa.CONCLUIDA);
-alterarStatus(buscar(2) as Tarefa, StatusTarefa.CONCLUIDA);
-alterarStatus(buscar(3) as Tarefa, StatusTarefa.CONCLUIDA);
+// console.log(buscar(35));
+// console.log(buscar(2121));
+// console.log(listar([2112]));
 
-remover(1);
-remover(2);
-remover(3);
-
-console.log(listar());
+alterarSituacao(35, SituacaoTarefa.CONCLUIDA);
+console.log(buscar(35));
