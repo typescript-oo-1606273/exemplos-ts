@@ -1,23 +1,3 @@
-import { Cores } from "./Cor";
-import { Produto } from "./Produto";
-
-export class Liquidificador implements Produto {
-  obterMarca(): string {
-    return "Britânia";
-  }
-  obterModelo(): string {
-    throw "SuperLiquidifica";
-  }
-  obterCor(): Cores {
-    throw Cores.PRETO;
-  }
-}
-
-
-
-
-
-
 /**
   Atributos (Dados):
     marca: A marca do liquidificador (string).
