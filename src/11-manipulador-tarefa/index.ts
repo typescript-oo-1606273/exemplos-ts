@@ -7,12 +7,7 @@
     observacoes (string): observações relacionadas a tarefa (opcional)
  */
 
-import {
-  adicionar,
-  alterarSituacao,
-  buscar,
-  listar,
-} from "./gerenciador-tarefa";
+import { adicionar, alterarSituacao } from "./gerenciador-tarefa";
 import { SituacaoTarefa } from "./situacao-tarefa";
 
 adicionar({
@@ -36,4 +31,3 @@ adicionar({
 // console.log(listar([2112]));
 
 alterarSituacao(35, SituacaoTarefa.CONCLUIDA);
-console.log(buscar(35));
