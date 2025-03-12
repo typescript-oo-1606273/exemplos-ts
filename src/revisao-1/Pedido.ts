@@ -1,60 +1,51 @@
+//Cada pedido precisa de um **ID** único, o **nome do cliente**, os **itens comprados** e o **status**.
+
+import { Cliente } from "./Cliente";
 import { EtapaPedido } from "./EtapaPedido";
 import { ItemPedido } from "./ItemPedido";
 
 export class Pedido {
-  /**
-   * Cada pedido precisa de um ID único, o nome do cliente, os itens comprados e o status.
-Cada item do pedido é composto por um nome e um valor.
-O valor total do pedido é igual a soma do valor de cada item do pedido.
-Lembre-se de começar o pedido sempre com o status "Pendente".
-   */
-
   private id: number;
-  private nomeCliente: string;
-  private items: Array<ItemPedido>;
+  private cliente: Cliente;
   private status: EtapaPedido;
+  private itens: ItemPedido[];
 
-  constructor(id: number, nomeCliente: string, items: Array<any>) {
+  constructor(
+    id: number,
+    cliente: Cliente,
+    itens: ItemPedido[],
+  ) {
     this.id = id;
-    this.nomeCliente = nomeCliente;
-    this.items = items;
-    this.status = EtapaPedido.PENDENTE;
+    this.cliente = cliente;
+    this.itens = itens;
+    this.status = EtapaPedido.Pendente;
   }
 
-  alterarStatus(novoStatus: EtapaPedido) {
-    this.status = novoStatus;
+  enviar() {
+    this.status = EtapaPedido.Enviado;
   }
 
-  obterId() {
-    return this.id;
+  processar() {
+    if(this.status !== EtapaPedido.Entregue) {
+      this.status = EtapaPedido.Processando;
+    }
   }
 
-  obterNomeCliente() {
-    return this.nomeCliente;
+  entregar() {
+    this.status = EtapaPedido.Entregue;
   }
 
-  obterItems() {
-    return this.items;
+  calcularTotal() {
+    let soma = 0;
+
+    this.itens.forEach(item => soma += item.valor);
+
+    return soma;
   }
 
-  obterStatus() {
-    return this.status;
-  }
-
-  obterValorTotal() {
-    let valorTotal: number = 0;
-
-    this.items.forEach((item) => {
-      valorTotal = valorTotal + item.obterValor();
-    });
-
-    return valorTotal;
-  }
-
-  exibeDados() {
-    return `Pedido ${this.id} para o cliente ${this.nomeCliente} está 
-      com o status ${this.status} e 
-      tem valor total ${this.obterValorTotal()}
-      e possui ${this.items.length}`;
+  mostrarInformacoes() {
+    const infoPedidos = this.itens.map(item => item.mostrarInformacoes());
+    return `Pedido Nº ${this.id} de ${this.cliente.nome} com status ${this.status} - Valor R$ ${this.calcularTotal()} ${infoPedidos.join(", ")}`;
   }
 }
+

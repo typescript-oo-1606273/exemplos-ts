@@ -1,18 +1,13 @@
-//Cada item do pedido é composto por um nome e um valor.
 export class ItemPedido {
-  private nome: string;
-  private valor: number;
+  nome: string;
+  valor: number;
 
-  constructor(nome: string, valor: number) {
-    this.nome = nome;
-    this.valor = valor;
+  constructor(parametroNome: string, parametroValor: number) {
+    this.nome = parametroNome;
+    this.valor = parametroValor;
   }
 
-  obterNome() {
-    return this.nome;
-  }
-
-  obterValor() {
-    return this.valor;
+  mostrarInformacoes() {
+    return `Item ${this.nome} - Valor R$ ${this.valor}`;
   }
 }

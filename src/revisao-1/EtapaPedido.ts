@@ -1,6 +1,6 @@
 export enum EtapaPedido {
-  PENDENTE = 0,
-  PROCESSANDO = 1,
-  ENVIDADO = 2,
-  ENTREGUE = 3,
+  Pendente = 0,
+  Processando = 1,
+  Enviado = 2,
+  Entregue = 3,
 }
