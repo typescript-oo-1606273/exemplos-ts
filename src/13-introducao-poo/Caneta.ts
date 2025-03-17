@@ -19,7 +19,7 @@ export class Caneta extends Produto {
   }
 
   escrever(texto: string): void {
-    if(this.nivelDeTinta > 0) {
+    if (this.nivelDeTinta > 0) {
       console.log(texto);
 
       this.nivelDeTinta = this.nivelDeTinta - 10;

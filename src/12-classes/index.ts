@@ -2,6 +2,8 @@
  * Pessoa
  */
 
+import { Caneta } from "../13-introducao-poo/Caneta";
+
 // type TipoPessoa = {
 //   nome: string;
 //   idade: number;
@@ -30,26 +32,30 @@ class Pessoa {
     console.log("Aqui, estou no construtor");
   }
 
-  getNome() { //getters
+  getNome() {
+    //getters
     return this.nome;
   }
 
-  getIdade() { //getters
+  getIdade() {
+    //getters
     return this.idade;
   }
 
-  setIdade(novaIdade: number) { //setters
-    if(novaIdade <= 120) {
+  setIdade(novaIdade: number) {
+    //setters
+    if (novaIdade <= 120) {
       this.idade = novaIdade;
     }
   }
 
-  apresentar() { //método
+  apresentar() {
+    //método
     console.log("Oi, sou " + this.nome);
   }
 }
 
-const jeff = new Pessoa("Jeff", 29);
+// const jeff = new Pessoa("Jeff", 29);
 
 // jeff.nome = "Outro nome";
 
@@ -94,5 +100,15 @@ Crie uma classe Produto com propriedades para nome e preço. Adicione um método
 Classe Contador
 Crie uma classe Contador com uma propriedade privada para contagem. Adicione métodos para incrementar a contagem e mostrar o valor atual.
 */
+
+const canetaFaber = new Caneta("Fabber Castell", "Vermelha", "Esferográfica"); //Instanciar
+const canetaBic = new Caneta("Bic", "Azul", "Esferográfica");
+
+canetaFaber.escrever("Olá, este é o curso de typescript");
+canetaFaber.escrever("Olá, este é o curso de typescript");
+canetaFaber.escrever("Olá, este é o curso de typescript");
+canetaFaber.escrever("Olá, este é o curso de typescript");
+
+console.log(canetaFaber);
 
 export {};
