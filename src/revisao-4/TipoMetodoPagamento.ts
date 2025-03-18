@@ -1,0 +1,6 @@
+export enum TipoMetodoPagamento {
+  PIX = 'PIX',
+  BOLETO = 'BOLETO',
+  CARTAOCREDITO = 'CARTAOCREDITO',
+  CARTAODEBITO = 'CARTAODEBITO'
+}
